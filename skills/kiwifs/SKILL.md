@@ -1,6 +1,6 @@
 ---
 name: kiwifs
-description: "Use when an agent should read, search, write, maintain, or operate a KiwiFS knowledge base through MCP tools. Prefer this over direct filesystem or Obsidian-style CRUD for canonical wiki knowledge, markdown pages, backlinks, graph traversal, Kanban workflows, analytics, imports, and git-backed operational docs. Trigger: /kiwifs"
+description: "Use when an agent should read, search, write, maintain, or operate a KiwiFS knowledge base exposed through a remote MCP server. Prefer this over direct filesystem or Obsidian-style CRUD for canonical wiki knowledge, backlinks, graph traversal, Kanban workflows, analytics, imports, and git-backed operational docs. Trigger: /kiwifs"
 allowed-tools: Read, Write, Edit, MultiEdit, Bash(git:*), Bash(npx:*), mcp__kiwifs__*, mcp__*_kiwi__*
 license: MIT
 metadata:
@@ -10,7 +10,7 @@ metadata:
 
 # KiwiFS MCP Knowledge Base
 
-Use this skill when KiwiFS is the canonical markdown wiki, knowledge graph, or operational knowledge store. KiwiFS is more than a folder of `.md` files: use its MCP/API surface so search indexes, wiki links, backlinks, graph analytics, workflows, linting, git history, and computed state stay coherent.
+Use this skill when KiwiFS is the canonical markdown wiki, knowledge graph, or operational knowledge store exposed to the agent through a remote MCP server. KiwiFS is more than a folder of `.md` files: use its MCP/API surface so search indexes, wiki links, backlinks, graph analytics, workflows, linting, git history, and computed state stay coherent. This skill does not install or host KiwiFS; it assumes the runtime already has a remote KiwiFS MCP server connected.
 
 ## When to Use
 
@@ -32,9 +32,9 @@ Do not use KiwiFS as the first choice for:
 - Raw recall of previous conversations: use session search.
 - Bulk binary storage or secrets: keep secrets out of KiwiFS pages.
 
-## Tool Name Discovery
+## Remote MCP Tool Discovery
 
-KiwiFS tools may be exposed with different prefixes depending on the MCP server name and agent runtime. Look for tools containing one of these prefixes:
+KiwiFS tools may be exposed with different prefixes depending on the remote MCP server name and agent runtime. Look for tools containing one of these prefixes:
 
 ```text
 kiwi_*

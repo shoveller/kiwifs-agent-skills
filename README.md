@@ -1,10 +1,10 @@
 # KiwiFS Agent Skills
 
-[![skills.sh](https://skills.sh/b/shoveller/kiwifs-agent-skills)](https://skills.sh/shoveller/kiwifs-agent-skills)
-
 Portable Agent Skills for working with KiwiFS knowledge bases exposed through remote MCP servers.
 
 This repository follows the `skills.sh` / `npx skills` layout: each skill lives under `skills/<skill-name>/SKILL.md`. The skill content is intentionally generic and does not depend on a private vault, host, or server name.
+
+The canonical install check is `npx skills add shoveller/kiwifs-agent-skills --list --full-depth`. The skills.sh website and badge may lag behind newly-published GitHub repositories while its index/cache catches up.
 
 ## Installation
 

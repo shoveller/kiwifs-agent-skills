@@ -2,7 +2,9 @@
 
 [![skills.sh](https://skills.sh/b/shoveller/kiwifs-agent-skills)](https://skills.sh/shoveller/kiwifs-agent-skills)
 
-Portable Agent Skills for working with KiwiFS knowledge bases exposed through remote MCP servers.
+Portable Agent Skills for working with [KiwiFS](https://www.kiwifs.com/) knowledge bases exposed through remote MCP servers.
+
+KiwiFS is a git-backed knowledge-base and wiki system. This package is only the agent skill layer for operating an already-connected KiwiFS remote MCP server; for the KiwiFS product/project itself, see https://www.kiwifs.com/.
 
 This repository follows the `skills.sh` / `npx skills` layout: each skill lives under `skills/<skill-name>/SKILL.md`. The skill content is intentionally generic and does not depend on a private vault, host, or server name.
 
@@ -28,7 +30,7 @@ npx skills add shoveller/kiwifs-agent-skills --skill kiwifs
 
 ## Requirements
 
-The consuming agent needs access to a remote KiwiFS MCP server, or to an agent runtime that exposes equivalent KiwiFS MCP tools. This package does not start, host, or configure KiwiFS itself; it only teaches the agent how to use already-connected remote MCP tools. Tool names vary by runtime and server name, but commonly include prefixes such as:
+The consuming agent needs access to a remote KiwiFS MCP server, typically backed by a KiwiFS deployment such as the one described at https://www.kiwifs.com/, or to an agent runtime that exposes equivalent KiwiFS MCP tools. This package does not start, host, or configure KiwiFS itself; it only teaches the agent how to use already-connected remote MCP tools. Tool names vary by runtime and server name, but commonly include prefixes such as:
 
 ```text
 kiwi_*
